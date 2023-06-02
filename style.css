@@ -234,11 +234,9 @@ header .container{
     display: inline-flex;
     gap: 20px;
 }
-
-.list-items::-webkit-scrollbar{
+.items::-webkit-scrollbar{
     display: none;
 }
-
 
 .list-items .item{
     width: 140px;
