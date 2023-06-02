@@ -1,0 +1,560 @@
+@import url('./variable.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family) ;
+}
+a{
+    text-decoration: none;
+    color: var(--color-grey);
+}
+a:hover{
+    color: black;
+}
+
+/* header section */
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 67px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    z-index: 1000;
+    background-color: var(--color-white);
+}
+
+.logo, .location, .search-bar, .login, .cart{
+    margin: 0px 25px;
+}
+
+.logo svg{
+    width: 100%;
+    height: 23px;
+}
+
+.location .location-title{
+    font-size: 14px;
+    font-weight: var(--fw-800);
+    margin-bottom: 3px;
+    letter-spacing: 0.3px;
+    max-width: 85px;
+}
+.location .location-title:hover{
+    color: grey;
+}
+
+.location .location-desc{
+    font-size: 11px;
+}
+.location .location-desc:hover{
+    color: brown;
+}
+
+.location-desc .fa-sort-down{
+    transform: translateY(-2px);
+    padding-left: 5px;
+}
+.location-desc .fa-sort-down:hover{
+    color: red;
+}
+
+.search-bar{
+    width: 52%;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+    background: var(--color-grey-2);
+    color: var(--color-grey);
+    height: 38px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px;
+}
+
+.search-bar input{
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    font-size: 10px;
+    font-weight: 100;
+    width: 100%;
+}
+.search-bar:hover{
+   border: 1px solid black;
+}
+
+.search-input{
+    width: 100%;
+}
+
+.search-bar .fa-magnifying-glass{
+    width: 13px;
+    color: var(--color-black);
+}
+.search-bar .fa-magnifying-glass:hover{
+    width: 15px;
+    color: blue;
+}
+
+.login{
+    font-size: 14px;
+    font-weight: 501;
+    color: var(--color-grey);
+    transition-property: all;
+    transition-duration: 1s;
+}
+.login:hover{
+    color: black;
+    font-size: 16px;
+}
+
+.cart button{
+    padding: 13px;
+    color: var(--color-white);
+    background-color: var(--color-green);
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: var(--fw-700);
+    border: none;
+}
+
+.cart .fa-cart-shopping{
+    height: 1.2em;
+    padding: 0px 5px 0px 0px;
+}
+.cart .fa-cart-shopping:hover{
+    animation-name: animation;
+    animation-iteration-count: 2;
+    animation-duration: 0.5s;
+}
+@keyframes animation{
+    from{
+        rotate: 30deg;
+    }
+    to{
+        rotate: -30deg;
+    }
+}
+/* main section */
+.wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 68px;
+}
+
+.main-container{
+    max-width: 1100px;
+}
+
+.banner img{
+    width: 100%;
+    height: 205px;
+    transition-property: all;
+    transition-duration: 0.8s;
+    transition-delay: 0.3s;
+    transition-timing-function: ease-in;
+}
+.banner img:hover{
+    height: 220px;
+}
+
+.banner-2{
+    display: flex;
+    gap: 20px;
+    overflow: auto scroll;
+    margin: 0 14px;
+}
+
+.banner-2::-webkit-scrollbar{
+    display: none;
+}
+
+.banner-2 .banner-img img{
+    height: 165px;
+    width: 285px;
+    transition-property: all;
+    transition-duration: 0.8s;
+    transition-delay: 0.3s;
+    transition-timing-function: ease-in;
+
+}
+.banner-2 .banner-img img:hover{
+    width: 305px;
+    height: 170px;
+}
+
+.categories{
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    padding: 6px 0px 0px 0px;
+}
+
+.section-3-img img{
+    width: 100%;
+    transition-property: all;
+    transition-duration: 0.8s;
+    transition-delay: 0.3s;
+    transition-timing-function: ease-in;
+}
+.section-3-img img:hover{
+    width: 110%;
+}
+
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 20px 19px;
+}
+
+.title .category-name{
+    font-weight: var(--fw-700);
+    font-size: 21px;
+}
+
+.title a{
+    color: black;
+    text-decoration: none;
+}
+
+.items{
+    margin: 0px 14px;
+    row-gap: 20px;
+    overflow: auto scroll;
+}
+
+.list-items{
+    display: inline-flex;
+    gap: 20px;
+}
+
+.list-items::-webkit-scrollbar{
+    display: none;
+}
+
+.list-items .item{
+    width: 140px;
+    border: 0.5px solid rgb(232, 232, 232);
+    box-shadow: rgba(0, 0, 0, 0.04) 2px 2px 8px;
+    border-radius: 8px;
+    padding: 20px;
+}
+.list-items .item:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.item .item-img img{
+    width: 100%;
+}
+
+.item-details{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.item-details .timer{
+    font-size: 7px;
+    font-weight: bolder;
+    background-color: var(--color-grey-2);
+    width: 50%;
+    padding: 4px;
+}
+
+.item-details .item-name{
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.item-details .item-weight{
+    font-size: 10px;
+    color: var(--color-grey);
+}
+
+.item-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-price .price{
+    font-size: 10px;
+    font-weight: var(--fw-800);
+}
+
+.item-price button{
+    font-size: 10px;
+    font-weight: var(--fw-800);
+    text-transform: uppercase;
+    padding: 3px 9px;
+    color: var(--color-green);
+    border: 1px solid var(--color-green);
+    border-radius: 3px;
+    background-color: var(--color-lightest-green);
+
+}
+.item-price button a{
+    color: var(--color-green);
+}
+.item-price button a:hover{
+    color:  var(--color-lightest-green);
+}
+.item-price button:hover{
+    background-color: green;
+    color:  var(--color-lightest-green);
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    top: 85px;
+    background-color: var(--color-grey-2);
+}
+.made-name:hover{
+    color: red;
+}
+
+.fa-heart{
+    color: red;
+    width: 15px;
+    padding: 3px 5px 0px 5px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .location .location-title {
+        font-size: 13px;
+    }
+    .cart button{
+        width: max-content;
+    }
+    .main-container {
+        max-width: 1000px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .location .location-title {
+        font-size: 11px;
+    }
+    .location .location-desc {
+        font-size: 9px;
+    }
+    .cart button{
+        width: max-content;
+    }
+    .main-container {
+        max-width: 700px;
+    }
+    .list-items .item {
+        width: 125px;
+        padding: 15px;
+    }
+    .title .category-name {
+        font-size: 19px;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .logo, .location, .search-bar, .login, .cart{
+        margin: 0px 9px;
+    }
+    .logo svg {
+        width: 90%;
+        height: 20px;
+    }
+    .login {
+        font-size: 11px;
+    }
+    .login:hover{
+        font-size: 13px;
+    }
+    .location .location-title {
+        font-size: 7px;
+    }
+    .location .location-desc {
+        font-size: 6px;
+    }
+    .search-bar {
+        height: 27px;
+        gap: 7px;
+        padding: 6px;
+      }
+      .search-bar .fa-magnifying-glass {
+        width: 10px;
+      }
+      .search-bar .fa-magnifying-glass:hover{
+        width: 12px;
+    }
+    .cart button {
+        padding: 8px;
+        font-size: 8px;
+        width: max-content;
+    }
+    .main-container {
+        max-width: 450px;
+    }
+    .list-items .item {
+        width: 100px;
+        padding: 3px;
+    }
+    .title .category-name {
+        font-size: 13px;
+    }
+
+    .banner img {
+        height: 150px;
+    }
+    .banner img:hover{
+        height: 155px;
+    }
+    .banner-2 {
+        gap: 12px;
+        margin: 0 7px;
+    }
+    .banner-2 .banner-img img {
+        height: 120px;
+        width: 200px;
+    }
+    .banner-2 .banner-img img:hover{
+        width: 210px;
+        height: 130px;
+    }
+    .categories {
+        display: grid;
+        grid-template-columns: repeat(5, 21%);
+    }
+    .section-3-img img {
+        width: 70%;
+    }
+    .section-3-img img:hover{
+        width: 75%;
+    }
+    .list-items {
+        gap: 7px;
+    }
+    footer {
+        font-size: 10px;
+      }
+
+}
+@media screen and (min-width: 319px) and (max-width: 480px) {
+    header .container {
+        height: 55px;
+    }
+    .logo, .location, .search-bar, .login, .cart{
+        margin: 0px 3px;
+    }
+    .logo svg {
+        width: 80%;
+        height: 18px;
+    }
+    .login {
+        font-size: 9px;
+    }
+    .login:hover{
+        font-size: 10px;
+    }
+    .location .location-title {
+        font-size: 6px;
+    }
+    .location .location-desc {
+        font-size: 5px;
+    }
+    .search-bar {
+        height: 20px;
+        gap: 6px;
+        padding: 5px;
+      }
+      .search-bar .fa-magnifying-glass {
+        width: 8px;
+      }
+      .search-bar .fa-magnifying-glass:hover{
+        width: 10px;
+    }
+    .cart button {
+        padding: 6px;
+        font-size: 5px;
+        width: max-content;
+    }
+
+    .main-container {
+        max-width: 300px;
+    }
+    .list-items .item {
+        width: 75px;
+        padding: 3px;
+    }
+    .title .category-name {
+        font-size: 10px;
+    }
+
+    .banner img {
+        height: 125px;
+    }
+    .banner img:hover{
+        height: 133px;
+    }
+    .banner-2 {
+        gap: 8px;
+        margin: 0 7px;
+    }
+    .banner-2 .banner-img img {
+        height: 100px;
+        width: 140px;
+    }
+    .banner-2 .banner-img img:hover{
+        width: 150px;
+        height: 105px;
+    }
+    .categories {
+        display: grid;
+        grid-template-columns: repeat(5, 21%);
+    }
+    .section-3-img img {
+        width: 70%;
+    }
+    .section-3-img img:hover{
+        width: 75%;
+    }
+    .items {
+        margin: 0px 6px;
+        row-gap: 20px;
+    }
+
+    .list-items {
+        gap: 5px;
+    }
+    .item-details {
+        row-gap: 2px;
+    }
+    .item-details .timer {
+        font-size: 5px;
+        padding: 2px;
+    }
+    .item-details .item-name {
+        font-size: 8px;   
+    }
+    .item-details .item-weight {
+        font-size: 6px;
+    }
+    .item-price .price {
+        font-size: 8px;
+    }
+    .item-price button {
+        font-size: 6px;
+    }
+    footer {
+        font-size: 8px;
+        height: 50px;
+    }
+    .fa-heart{
+        padding: 3px 3px 0px 3px;
+    }
+}
